@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Movies</h1>
+
+<p> 
+  <%= link_to new_movie_path  do %>
+  <i class="glyphicon glyphicon-plus"> New Movie</i>
+  <% end %>
+</p>
+
+<div class="row">
+    <% @movies.each do |movie| %>
+    <div class="col-md-6">
+      <div class="well">
+      
+        <%= movie.name %>
+        <h2><%= link_to movie.name, movie %></h2>
+
+        <p>
+
+        <h2><%= link_to edit_movie_path(movie) do %></h2>
+        <i class="glyphicon glyphicon-pencil"></i>
+        <% end %>
+
+        <%= link_to movie, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <i class="glyphicon glyphicon-trash"> </i>
+        <% end %>
+
+        </p>
+
+      </div>
+    </div>
+
+    <% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Movie', new_movie_path %>
