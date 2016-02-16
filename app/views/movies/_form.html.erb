@@ -11,15 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.collection_select :movie_id, @movies, :id, :name, {:include_blank => 'Select a Movie'}, class: 'form-control', placeholder: 'Movie Name' %>
+  <div class="form-group">
+  <%= f.text_field :name, class: 'form-control', placeholder: 'Movie Name'%>
   </div>
-  <div class="field">
-    <%= f.text_field :name, class: 'form-control', placeholder: 'Genre Name'%>
+
+  <div class="form-group">
+     <%= f.collection_select :genre_id, @genres, :id, :name, {:include_blank => 'Select a Genre'}, class: 'form-control', placeholder: 'Genre Name' %>
   </div>
-  <div class="field">
-   <%= f.collection_select :actor_id, @actors, :id, :name, {:include_blank => 'Select an Actor'}, class: 'form-control', placeholder: 'Actor Name' %>
+
+  <div class="form-group">
+     <%= f.collection_select :actor_id, @actors, :id, :name, {:include_blank => 'Select an Actor'}, class: 'form-control', placeholder: 'Actor Name' %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

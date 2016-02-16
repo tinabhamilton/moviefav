@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Moviefav</title>
+  <title>Movies</title>
   <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"%>
@@ -15,14 +15,13 @@
         <div class="cover-container">
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand"><i class= "glyphicon glyphicon-facetime-video"></i> Tina's Movies</h3>
-              <nav>
+              <h2 class="masthead-brand"><i class= "glyphicon glyphicon-facetime-video"></i> <%= link_to "Tina's Movies", root_path %></h2>
+               <nav>
                 <ul class="nav masthead-nav">
-                 	<li><%= link_to "Tina's Movies", root_path %></li>
-		  			<li><%= link_to "Actors", actors_path %></li>
-		  			<li><%= link_to "Movies", movies_path %></li>
-            <li><%= link_to "Genres", genres_path %></li>            
-            <li><%= link_to "About", about_path %></li>
+                  <li><%= link_to "Actors", actors_path %></li>
+                  <li><%= link_to "Movies", movies_path %></li>
+                  <li><%= link_to "Genres", genres_path %></li>            
+                  <li><%= link_to "About", about_path %></li>
                 </ul>
               </nav>
             </div>
